@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+## Basic Calculator with React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Live Link
+[Click here](https://basic-calculator-react.herokuapp.com/) to use the calculator
+### Objectives:
+- Building a simple React application
+- Working with React classes
+- Functional programming
+- Meeting model client requirements
 
-## Available Scripts
+## Features
+A fully functional calculator that performs arithmetic operations. The following operations are supported: `addition, subtraction, multiplication, division, percentage, negation`. All operations to follow BODMAS principle
 
-In the project directory, you can run:
+## Prerequisites
+- Internet Connection
+- An Integrated Development Environment
+- Chrome, Firefox or Safari.
+- Node Package Manager [(NPM)](https://docs.npmjs.com/about-npm)
 
-### `yarn start`
+## Tools/Built With
+- Node.js
+- React
+- React-DOM
+- React-Create-App
+- npm
+- CSS
+- Javascript ES6+
+- Heroku
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Getting Started
+- To get started with the app, clone this project by running `git clone https://github.com/george-swift/react-calculator.git`
+- `cd` into the directory and run `npm install` to install the needed packages and dependencies
+- A development tool is included in the npm script. Run `npm start` to fire up a local server with live reloading.
+- If not already redirected, visit `http://localhost:3000/` in your browser to use the calculator.
+- To terminate the server, enter `Ctrl + C` in your terminal
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Testing
+Run `npm test` to test the application
+## Authors
 
-### `yarn test`
+👤 &nbsp; **Ubong George**
+- LinkedIn: [Ubong George](https://www.linkedin.com/in/ubong-itok)
+- Twitter: [@\_\_pragmaticdev](https://twitter.com/__pragmaticdev)
+- GitHub: [@george-swift](https://github.com/george-swift)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Acknowledgments
 
-### `yarn build`
+- [React Team](https://reactjs.org/)
+- [Microverse](https://www.microverse.org)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Show your support
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Leave a :star:️ &nbsp; if you like this project!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## License
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
