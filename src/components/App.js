@@ -7,9 +7,7 @@ function App() {
     <div className="container">
       <div className="row flex-column calculator">
         <Display />
-        <div className="col-12 h-75">
-          <ButtonPanel />
-        </div>
+        <ButtonPanel />
       </div>
     </div>
   );
