@@ -3,7 +3,7 @@ import Display from '../components/Display';
 
 test('Display renders outcomes of calculations correctly', () => {
   const tree = renderer
-    .create(<Display result={10} />)
+    .create(<Display result="10" />)
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
