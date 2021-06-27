@@ -8,6 +8,14 @@ export default function calculate(data, buttonName) {
     temp,
   } = data;
 
+  const watchExp = (total, input) => {
+    const curr = Number(total).toPrecision();
+    const output = curr + input;
+    return (output.length > 12)
+      ? Number(output).toExponential(8)
+      : output;
+  };
+
   switch (buttonName) {
     case 'AC':
       return {
@@ -115,7 +123,7 @@ export default function calculate(data, buttonName) {
       if (operation) {
         return {
           total,
-          next: next ? `${next}${buttonName}` : buttonName,
+          next: next ? watchExp(next, buttonName) : buttonName,
           operation,
         };
       }
@@ -130,7 +138,7 @@ export default function calculate(data, buttonName) {
       }
 
       return {
-        total: total ? `${total}${buttonName}` : buttonName,
+        total: total ? watchExp(total, buttonName) : buttonName,
         next,
         operation,
       };
