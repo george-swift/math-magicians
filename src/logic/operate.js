@@ -11,9 +11,9 @@ export default function operate(numberOne, operation, numberTwo) {
     return 0;
   }
 
-  const format = (bigNumber) => (bigNumber.c.length >= 10
-    ? bigNumber.toFixed(8).toString()
-    : bigNumber.toString());
+  const format = (big) => (big.c.length >= 10
+    ? big.toExponential(8).toString()
+    : big.toString());
 
   try {
     switch (operation) {
