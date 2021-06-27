@@ -1,3 +1,5 @@
+import calculate from '../logic/calculate';
+
 describe('Correct class names derived from name prop ', () => {
   const btnStyle = (value) => {
     if (value === 'AC') return 'clear';
@@ -32,5 +34,63 @@ describe('Correct class names derived from name prop ', () => {
     const { division } = keyset;
     expect(btnStyle(division)).not.toBe('number');
     expect(btnStyle(division)).toMatch('operator');
+  });
+});
+
+describe('Correct mutation of data object depending on button name', () => {
+  const data = {
+    total: 10,
+    next: 10,
+    operation: '+',
+    temp: false,
+  };
+
+  test('Should nullify total, next and operation values with clear button', () => {
+    const mutatedObject = calculate(data, 'AC');
+    const mutatedKeys = Object.keys(mutatedObject).filter((key) => mutatedObject[key] === null);
+    expect(mutatedKeys).toHaveLength(3);
+
+    const mutatedValues = Object.values(mutatedObject);
+    const expected = [null, null, null, false];
+    expect(mutatedValues).toEqual(expect.arrayContaining(expected));
+  });
+
+  test('Should add decimal sign correctly during mutation', () => {
+    data.next = '10';
+    const mutatedObject = calculate(data, '.');
+    const decimalNumber = mutatedObject.next;
+    expect(decimalNumber).toMatch('10.');
+
+    data.total = '10.25';
+    const onlyOneDecimal = calculate(data, '.').total;
+    expect(onlyOneDecimal.match('.')).toHaveLength(1);
+    expect(onlyOneDecimal.endsWith('5')).toBeTruthy();
+  });
+
+  test('Should resolve percentages correctly during mutation', () => {
+    const mutatedObject = calculate(data, '%');
+    const percent = mutatedObject.next;
+    expect(percent).toEqual('0.1');
+  });
+
+  test('Should return evaluations on pressing equals button', () => {
+    data.total = 10;
+    data.next = 10;
+    data.operation = 'x';
+
+    const mutatedObject = calculate(data, '=');
+    const { total } = mutatedObject;
+    expect(total).toEqual('100');
+  });
+
+  test('Should prep for new evaluations on pressing equals button', () => {
+    data.total = 100;
+    data.next = 10;
+    data.operation = '/';
+
+    const mutatedObject = calculate(data, '=');
+    const mutatedValues = Object.values(mutatedObject);
+    const expected = ['10', null, null, true];
+    expect(mutatedValues).toEqual(expect.arrayContaining(expected));
   });
 });
