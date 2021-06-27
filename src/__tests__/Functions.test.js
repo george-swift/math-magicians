@@ -94,6 +94,19 @@ describe('Correct mutation of data object depending on button name', () => {
     const expected = ['10', null, null, true];
     expect(mutatedValues).toEqual(expect.arrayContaining(expected));
   });
+
+  test('Should convert input longer than 12 to exponential form', () => {
+    const bigData = {
+      total: 777777777777,
+      next: null,
+      operation: null,
+      temp: false,
+    };
+
+    const mutatedObj = calculate(bigData, '8');
+    const { total } = mutatedObj;
+    expect(total).toBe('7.77777778e+12');
+  });
 });
 
 describe('Performing simple math operations', () => {
