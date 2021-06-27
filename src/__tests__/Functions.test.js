@@ -1,4 +1,5 @@
 import calculate from '../logic/calculate';
+import operate from '../logic/operate';
 
 describe('Correct class names derived from name prop ', () => {
   const btnStyle = (value) => {
@@ -92,5 +93,22 @@ describe('Correct mutation of data object depending on button name', () => {
     const mutatedValues = Object.values(mutatedObject);
     const expected = ['10', null, null, true];
     expect(mutatedValues).toEqual(expect.arrayContaining(expected));
+  });
+});
+
+describe('Performing simple math operations', () => {
+  let num1 = 2;
+  let num2 = 5;
+
+  test('Should return string evaluation of button inputs', () => {
+    const result = operate(num1, 'x', num2);
+    expect(result).toBe('10');
+  });
+
+  test('Should return exponential form if evaluated string is more than 10 values', () => {
+    num1 = 789651;
+    num2 = 8532147;
+    const result = operate(num1, 'x', num2);
+    expect(result).toEqual('6.73741841e+12');
   });
 });
