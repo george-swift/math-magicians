@@ -124,4 +124,11 @@ describe('Performing simple math operations', () => {
     const result = operate(num1, 'x', num2);
     expect(result).toEqual('6.73741841e+12');
   });
+
+  test('Should return an error message if user attempts to divide by zero', () => {
+    num1 = 20;
+    num2 = 0;
+    const result = operate(num1, '/', num2);
+    expect(result).toBe('Error');
+  });
 });
