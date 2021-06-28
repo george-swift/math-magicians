@@ -45,7 +45,7 @@ button {
 
 .operator:active { transform: translateY(1px); }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 375px) {
   .calculator {
     width: 400px;
     height: 500px;
