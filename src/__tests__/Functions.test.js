@@ -97,7 +97,7 @@ describe('Correct mutation of data object depending on button name', () => {
 
   test('Should convert input longer than 12 to exponential form', () => {
     const bigData = {
-      total: 777777777777,
+      total: '777777777777',
       next: null,
       operation: null,
       temp: false,
