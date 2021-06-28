@@ -14,3 +14,10 @@ test('Display has default prop value of 0', () => {
     .toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+test('Display renders operation correctly', () => {
+  const tree = renderer
+    .create(<Display operation="x" result="10" />)
+    .toJSON();
+  expect(tree).toMatchSnapshot();
+});
