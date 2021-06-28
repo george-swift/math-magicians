@@ -1,4 +1,5 @@
 ## Basic Calculator with React
+![](./calculator.png)
 
 ## Live Link
 [Click here](https://basic-calculator-react.herokuapp.com/) to use the calculator
@@ -9,7 +10,7 @@
 - Meeting model client requirements
 
 ## Features
-A fully functional calculator that performs arithmetic operations. The following operations are supported: `addition, subtraction, multiplication, division, percentage, negation`. All operations to follow BODMAS principle
+A fully functional calculator that performs arithmetic operations. The following operations are supported: `addition, subtraction, multiplication, division, percentage, negation, decimals`. For evaluations longer than 12 values, the calculator returns an exponential form. The operation carried out is displayed in the top left corner. Use the `AC` button to clear the display
 
 ## Prerequisites
 - Internet Connection
@@ -46,6 +47,7 @@ Run `npm test` to test the application
 ## Acknowledgments
 
 - [React Team](https://reactjs.org/)
+- [Big.js](http://mikemcl.github.io/big.js/#)
 - [Microverse](https://www.microverse.org)
 
 ## Show your support
