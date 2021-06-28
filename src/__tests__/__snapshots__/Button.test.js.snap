@@ -1,10 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button renders correctly 1`] = `
+exports[`Testing button component with passed props Button renders correctly 1`] = `
 <button
   className="number"
   id="number-5"
   name="number-5"
+  onClick={[Function]}
   type="button"
   value={5}
 >
@@ -12,11 +13,12 @@ exports[`Button renders correctly 1`] = `
 </button>
 `;
 
-exports[`Button supports unicode escape sequence 1`] = `
+exports[`Testing button component with passed props Button supports unicode escape sequence 1`] = `
 <button
   className="operator"
   id="division"
   name="division"
+  onClick={[Function]}
   type="button"
   value="/"
 >
