@@ -7,13 +7,14 @@ const btnStyle = (value) => {
   return (typeof value === 'number') ? 'number' : 'operator';
 };
 
-const Button = ({ name }) => (
+const Button = ({ name, clickHandler }) => (
   <button
     id={name}
     type="button"
     className={btnStyle(keySet[name])}
     name={name}
     value={keySet[name]}
+    onClick={() => { clickHandler(`${keySet[name]}`); }}
   >
     {keySet[name]}
   </button>
@@ -21,6 +22,7 @@ const Button = ({ name }) => (
 
 Button.propTypes = {
   name: PropTypes.string.isRequired,
+  clickHandler: PropTypes.func.isRequired,
 };
 
 export default Button;
