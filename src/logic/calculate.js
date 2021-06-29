@@ -9,6 +9,7 @@ export default function calculate(data, buttonName) {
   } = data;
 
   const watchExp = (total, input) => {
+    if (total.includes('.') && !total.includes('e')) return `${total}${input}`;
     const curr = Number(total).toPrecision();
     const output = curr + input;
     return (output.length > 12)
