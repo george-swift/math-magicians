@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Display has default prop value of 0 1`] = `
+<div
+  className="col-12 h-25 text-white"
+>
+  <div
+    className="problem"
+  >
+    
+  </div>
+  <div
+    className="result"
+  >
+    0
+  </div>
+</div>
+`;
+
+exports[`Display renders operation correctly 1`] = `
+<div
+  className="col-12 h-25 text-white"
+>
+  <div
+    className="problem"
+  >
+    x
+  </div>
+  <div
+    className="result"
+  >
+    10
+  </div>
+</div>
+`;
+
+exports[`Display renders outcomes of calculations correctly 1`] = `
+<div
+  className="col-12 h-25 text-white"
+>
+  <div
+    className="problem"
+  >
+    
+  </div>
+  <div
+    className="result"
+  >
+    10
+  </div>
+</div>
+`;
