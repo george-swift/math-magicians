@@ -5,7 +5,7 @@ const Display = ({ operation, result }) => (
     <div className="problem">
       {operation}
     </div>
-    <div className="result">
+    <div className={result.length > 16 ? 'result fs-2' : 'result'}>
       {result}
     </div>
   </div>
