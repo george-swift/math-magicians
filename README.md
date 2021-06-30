@@ -6,6 +6,7 @@
 ### Objectives:
 - Building a simple React application
 - Working with React classes
+- Using React Hooks with function components
 - Functional programming
 - Meeting model client requirements
 
