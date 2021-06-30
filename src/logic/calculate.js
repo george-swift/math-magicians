@@ -29,9 +29,8 @@ export default function calculate(data, buttonName) {
     case '+/-':
       return next
         ? {
-          total,
+          ...data,
           next: `${next * -1}`,
-          operation,
           temp: false,
         }
         : {
@@ -44,24 +43,21 @@ export default function calculate(data, buttonName) {
     case '%':
       if (next) {
         return {
-          total,
+          ...data,
           next: next.includes('%') ? next : `${next / 100}`,
-          operation,
           temp: false,
         };
       }
 
       return total
         ? {
+          ...data,
           total: total.includes('%') ? total : `${total / 100}`,
-          next,
-          operation,
           temp: false,
         }
         : {
+          ...data,
           total: '0',
-          next,
-          operation,
         };
 
     case '+':
@@ -85,24 +81,21 @@ export default function calculate(data, buttonName) {
     case '.':
       if (next) {
         return {
-          total,
+          ...data,
           next: next.includes('.') ? next : `${next}.`,
-          operation,
           temp: false,
         };
       }
       if (total) {
         return {
+          ...data,
           total: total.includes('.') ? total : `${total}.`,
-          next,
-          operation,
           temp: false,
         };
       }
       return {
+        ...data,
         total: '0.',
-        next,
-        operation,
       };
 
     case '=':
@@ -123,25 +116,22 @@ export default function calculate(data, buttonName) {
     default:
       if (operation) {
         return {
-          total,
+          ...data,
           next: next ? watchExp(next, buttonName) : buttonName,
-          operation,
         };
       }
 
       if (temp) {
         return {
+          ...data,
           total: buttonName,
-          next,
-          operation,
           temp: false,
         };
       }
 
       return {
+        ...data,
         total: total ? watchExp(total, buttonName) : buttonName,
-        next,
-        operation,
       };
   }
 }
