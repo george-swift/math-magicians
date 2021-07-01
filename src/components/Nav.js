@@ -45,11 +45,11 @@ const Navbar = () => (
             <span className="ms-2">Calculator</span>
           </Link>
           <Link
-            to="/quotes"
+            to="/quote"
             className="nav-link"
           >
             <RiChatQuoteFill />
-            <span className="ms-2">Quotes</span>
+            <span className="ms-2">Quote</span>
           </Link>
         </div>
       </div>
