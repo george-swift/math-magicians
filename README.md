@@ -44,7 +44,7 @@ and they are referenced below each quote.
 - Heroku
 
 ## Getting Started
-- To get started with the app, clone this project by running `git clone https://github.com/george-swift/react-calculator.git`
+- To get started with the app, clone this project by running `git clone https://github.com/george-swift/math-magicians.git`
 - `cd` into the directory and run `npm install` to install the needed packages and dependencies
 - A development tool is included in the npm script. Run `npm start` to fire up a local server with live reloading.
 - If not already redirected, visit `http://localhost:3000/` in your browser to use the calculator.
