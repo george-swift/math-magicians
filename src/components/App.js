@@ -1,28 +1,24 @@
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
 import '../stylesheet/App.css';
-import { useState } from 'react';
-import Display from './Display';
-import ButtonPanel from './ButtonPanel';
-import calculate from '../logic/calculate';
+import Navbar from './Nav';
+import Home from './Home';
+import Calculator from './Calculator';
+import Quote from './Quotes';
 
-export default function App() {
-  const calculatorData = {
-    total: null,
-    next: null,
-    operation: null,
-  };
+const App = () => (
+  <Router>
+    <Navbar />
 
-  const [data, setData] = useState(calculatorData);
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/calculator" element={<Calculator />} />
+      <Route path="/quote" element={<Quote />} />
+    </Routes>
+  </Router>
+);
 
-  const handleClick = (buttonName) => setData((data) => calculate(data, buttonName));
-
-  const { total, next, operation } = data;
-
-  return (
-    <div className="container">
-      <div className="row flex-column calculator">
-        <Display operation={operation} result={next || total || '0'} />
-        <ButtonPanel clickHandler={handleClick} />
-      </div>
-    </div>
-  );
-}
+export default App;
