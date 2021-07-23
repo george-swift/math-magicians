@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot of Home Page should render page correctly 1`] = `
+<div
+  className="container flex-column text-center pt-5"
+>
+  <h1>
+    Welcome to our page
+  </h1>
+  <div
+    className="mt-4 card bg-dark text-white"
+  >
+    <img
+      alt="A blackboard"
+      className="w-100"
+      src="roman-mager.jpg"
+    />
+    <div
+      className="card-body"
+    >
+      <p
+        className="card-text"
+      >
+        Math Magicians is a single page web app that provides an easy way of solving arithmetic problems. Built with React, React Router v6, Javascript, Bootstrap, HTML5/CSS3.
+      </p>
+      <a
+        className="btn btn-warning"
+        href="/calculator"
+        onClick={[Function]}
+      >
+        Get Started
+      </a>
+    </div>
+  </div>
+</div>
+`;
